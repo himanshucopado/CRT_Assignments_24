@@ -33,7 +33,7 @@ ${email_address}                hsharma+122@copado.com
 #     Set Global Variable         ${mailinator_url}           ${url}
 #     Log to Console              \n\n\n\n\n\nCOPY THIS LINK TO YOUR OWN BROWSER\n\n
 #     Log to Console              \n\n${mailinator_url}\n\n\n\n\n\n
-    Open Window
+    # Open Window
 
 
 Exercise 4 - Create Salesforce Trial Org
