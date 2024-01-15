@@ -22,17 +22,17 @@ ${email_address}                hsharma+122@copado.com
     # Copy the mailinator url from live testing into you own browser
     # For you to login to your salesforce trial org.
     # To also validate your browser and laptop.
-Exercise 4 - Do it for me! Create online mailbox
-    GoTo                        https://www.mailinator.com/
-    ${unique_mail_address}=     Generate Random String      14                          [NUMBERS]temponlinemail
-    Type Text                   Enter Public Mailinator Inbox                           ${unique_mail_address}
-    Click Text                  GO
-    Set Suite Variable          ${email_address}            ${unique_mail_address}@mailinator.com
-    Log to Console              ${email_address}
-    ${url}=                     GetUrl
-    Set Global Variable         ${mailinator_url}           ${url}
-    Log to Console              \n\n\n\n\n\nCOPY THIS LINK TO YOUR OWN BROWSER\n\n
-    Log to Console              \n\n${mailinator_url}\n\n\n\n\n\n
+# Exercise 4 - Do it for me! Create online mailbox
+#     GoTo                        https://www.mailinator.com/
+#     ${unique_mail_address}=     Generate Random String      14                          [NUMBERS]temponlinemail
+#     Type Text                   Enter Public Mailinator Inbox                           ${unique_mail_address}
+#     Click Text                  GO
+#     Set Suite Variable          ${email_address}            ${unique_mail_address}@mailinator.com
+#     Log to Console              ${email_address}
+#     ${url}=                     GetUrl
+#     Set Global Variable         ${mailinator_url}           ${url}
+#     Log to Console              \n\n\n\n\n\nCOPY THIS LINK TO YOUR OWN BROWSER\n\n
+#     Log to Console              \n\n${mailinator_url}\n\n\n\n\n\n
     Open Window
 
 
