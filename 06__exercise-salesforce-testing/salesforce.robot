@@ -1,5 +1,5 @@
 *** Settings ***
-Resource                      ../resources/common.robot
+Resource                      resources/common.robot
 Library                       QForce
 Suite Setup                   Setup Browser
 Suite Teardown                Close All Browser Sessions
