@@ -7,8 +7,9 @@ Library                         Collections
 
 *** Variables ***
 ${browser}                      chrome
-${username}                     YOUR USERNAME HERE
-${login_url}                    https://YOURDOMAIN.my.salesforce.com                    # Salesforce instance. NOTE: Should be overwritten in CRT variables
+${username}                     hsharma+122-fglu@force.com
+${password}
+${login_url}                    https://efficiency-innovation-9486.my.salesforce.com                    # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
 
 # *** Variables ***
