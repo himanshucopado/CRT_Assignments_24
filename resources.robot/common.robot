@@ -37,6 +37,7 @@ Login
     GoTo                        ${login_url}
     TypeText                    Username                    ${username}                 delay=1
     TypeText                    Password                    ${password}
+    Log To Console              ${password}
     ClickText                   Log In
     
     # Uncommment with Exercise 8 MFA
