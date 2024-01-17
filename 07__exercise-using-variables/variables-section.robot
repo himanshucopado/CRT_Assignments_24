@@ -5,22 +5,22 @@ ${my_var}     my_value
 
 *** Test Cases ***
 Exercise 7 - Variables Section
-    Log    ${my_var}
-    Log    ${my_list}
-    Log    ${my_dict}
+    Log To Console    ${my_var}
+    Log To Console    ${my_list}
+    Log To Console   ${my_dict}
     FOR    ${item}    IN    @{my_list}
-        Log    ${item}
+        Log To Console   ${item}
     END
-    Log    ${my_dict}[name]
-    Log    ${my_dict}[password]
+    Log To Console  ${my_dict}[name]
+    Log To Console   ${my_dict}[password]
     FOR   ${key}    ${value}    IN    &{my_dict}
         Log Many    ${key}    ${value}
     END
     My Keyword
     
-    Log       Suitvariable
-    Log       Robotvariable
-    Log       ProjectVariable      
+    Log To Console      Suitvariable
+    Log To Console      Robotvariable
+    Log To Console      ProjectVariable      
 
 
 *** Keywords ***
