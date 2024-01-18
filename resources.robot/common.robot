@@ -45,14 +45,14 @@ Login
     # MFA is only required for unknown devices or browsers, once verified it is not asked for. 
     # To enforce MFA in your SF trial, Setup -> Identity -> Identity Verification -> Require MFA for all direct UI logins to your Salesforce org
     
-    # ${MFA_needed}=              Run Keyword And Return Status                           Should Not Be Equal         ${None}         ${MY_SECRET}
-    # Log To Console              ${MFA_needed} # When given ${MFA_needed} is true, see Log to Console keyword result
+    ${MFA_needed}=              Run Keyword And Return Status                           Should Not Be Equal         ${None}         ${MY_SECRET}
+    Log To Console              ${MFA_needed} # When given ${MFA_needed} is true, see Log to Console keyword result
     
-    # IF                          ${MFA_needed}
-    #     ${mfa_code}=            GetOTP                      ${username}                 ${MY_SECRET}
-    #     TypeSecret              Verification Code           ${mfa_code}
-    #     ClickText               Verify
-    # END
+    IF                          ${MFA_needed}
+        ${mfa_code}=            GetOTP                      ${username}                 ${MY_SECRET}
+        TypeSecret              Verification Code           ${mfa_code}
+        ClickText               Verify
+    END
 
 Login and Verify Code
     [Documentation]             Login to Salesforce instance
