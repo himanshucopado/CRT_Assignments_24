@@ -49,6 +49,7 @@ Exercise 6 - Entering A Lead Tina Smith
     VerifyText                  Tina Smith
     VerifyText                  Manager
     VerifyText                  Growmore
+    Logout
 
 Exercise 6 - Delete Tina Smith's Lead
     [tags]                      Lead                        Git Repo Exercise
@@ -62,3 +63,4 @@ Exercise 6 - Delete Tina Smith's Lead
     ClickText                   Delete
     ClickText                   Close
     Log Screenshot
+    Logout
