@@ -65,7 +65,7 @@ Exercise 6 - Delete Tina Smith's Lead
     CloseAllBrowsers
 
 Login-Logout                    
-    Login
+    Run Keyword    Login
     Run Keyword And Continue On Failure    Login
     Log To Console                        Succcess
     Logout
