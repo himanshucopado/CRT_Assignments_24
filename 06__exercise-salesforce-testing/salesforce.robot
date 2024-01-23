@@ -2,7 +2,7 @@
 Resource                        ../resources.robot/common.robot
 Library                         QForce
 Suite Setup                     Setup Browser
-# Test Teardown                   Run Keyword    Logout
+Test Teardown                   Run Keyword    Logout
 Suite Teardown                  Close All Browser Sessions
 
 
@@ -49,7 +49,7 @@ Exercise 6 - Entering A Lead Tina Smith
     VerifyText                  Tina Smith
     VerifyText                  Manager
     VerifyText                  Growmore
-    Logout
+    # Logout
 
 Exercise 6 - Delete Tina Smith's Lead
     [tags]                      Lead                        Git Repo Exercise
@@ -63,4 +63,4 @@ Exercise 6 - Delete Tina Smith's Lead
     ClickText                   Delete
     ClickText                   Close
     Log Screenshot
-    Logout
+    # Logout
