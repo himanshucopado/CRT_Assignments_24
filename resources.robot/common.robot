@@ -53,37 +53,6 @@ Login
         ClickText               Verify
     END
 
-Login and Verify Code
-    [Documentation]             Login to Salesforce instance
-    GoTo                        ${login_url}
-    TypeText                    Username                    ${username}                 delay=1
-    TypeText                    Password                    ${password}
-    ClickText                   Log In
-
-    ${code_needed}=            IsText                      Verify Your Identity
-
-    IF                         '${code_needed}' == 'True'
-        Log to Console         Verify Identify Screen appeared, get email verification code and enter it
-        Open Window
-        Switch Window          NEW
-        GoTo                   ${mailinator_url}
-        ${email_count}=        Get Text Count              Verify your identity in Salesforce
-        Log to Console         ${email_count}
-        ClickText              Verify your identity in Salesforce                       delay=5s
-        Log Screenshot
-        ${email_body}=         Get Text                    //body[@marginheight\='0']
-        ${code} =              Get Regexp Matches          ${email_body}           Verification Code: (......)                    1
-        Log to Console         ${code}
-        Switch Window          1
-        Type Text              Verification Code           ${code}[0]
-        Log Screenshot
-        Click Text             Verify                      anchor=again
-    ELSE
-        Log to Console         Verify Identify Screen did not appear, continue set password
-    END
-
-    SwitchWindow                1
-
 Login As
     [Documentation]       Login As different persona. User needs to be logged into Salesforce with Admin rights
     ...                   before calling this keyword to change persona.
@@ -168,3 +137,34 @@ Custom Login
                 ClickText               Verify
             END               
     END
+
+Login and Verify Code
+    [Documentation]             Login to Salesforce instance
+    GoTo                        ${login_url}
+    TypeText                    Username                    ${username}                 delay=1
+    TypeText                    Password                    ${password}
+    ClickText                   Log In
+
+    ${code_needed}=            IsText                      Verify Your Identity
+
+    IF                         '${code_needed}' == 'True'
+        Log to Console         Verify Identify Screen appeared, get email verification code and enter it
+        Open Window
+        Switch Window          NEW
+        GoTo                   ${mailinator_url}
+        ${email_count}=        Get Text Count              Verify your identity in Salesforce
+        Log to Console         ${email_count}
+        ClickText              Verify your identity in Salesforce                       delay=5s
+        Log Screenshot
+        ${email_body}=         Get Text                    //body[@marginheight\='0']
+        ${code} =              Get Regexp Matches          ${email_body}           Verification Code: (......)                    1
+        Log to Console         ${code}
+        Switch Window          1
+        Type Text              Verification Code           ${code}[0]
+        Log Screenshot
+        Click Text             Verify                      anchor=again
+    ELSE
+        Log to Console         Verify Identify Screen did not appear, continue set password
+    END
+
+    SwitchWindow                1
