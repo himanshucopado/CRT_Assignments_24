@@ -63,3 +63,7 @@ Exercise 6 - Delete Tina Smith's Lead
     ClickText                   Close
     Log Screenshot
     CloseAllBrowsers
+    
+Login-Logout
+    Login
+    Logout
