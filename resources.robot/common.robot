@@ -59,6 +59,7 @@ Logout
     IF                          ${loggedIn}
         ClickText               Log out                     partial_match=False 
     END
+    VerifyText    Log In
 Home
     [Documentation]             Navigate to homepage, login if needed
     GoTo                        ${home_url}
