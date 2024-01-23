@@ -8,17 +8,8 @@ Library                         Collections
 *** Variables ***
 ${browser}                      chrome
 ${username}                     hsharma+122-fglu@force.com
-# ${password}                     crttest1
 ${login_url}                    https://efficiency-innovation-9486.my.salesforce.com                    # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
-
-# *** Variables ***
-# ${browser}                      chrome
-# ${username}                     ea9mlm8la81a5l-pmcd@force.com
-# ${login_url}                    https://energy-force-4969.my.salesforce.com                    # Salesforce instance. NOTE: Should be overwritten in CRT variables
-# ${home_url}                     ${login_url}/lightning/page/home
-# ${password}		                TrialSF01!
-
 
 *** Keywords ***
 Setup Browser
