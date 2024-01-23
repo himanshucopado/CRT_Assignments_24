@@ -99,6 +99,23 @@ Login As
     VerifyText            Freeze                      
     ClickText             Login                       anchor=Freeze          delay=1      
 
+Logout As
+    [Documentation]             Logout as specific user and closing second tab and switching to first tab.
+    ${loggedIn}=                isText                      Log out as
+    IF                          ${loggedIn}
+        ClickText               Log out as
+        VerifyText              New User
+        CloseWindow
+        Switchwindow            1
+    END
+
+Logout
+    [Documentation]             Logout sessions
+    ${loggedIn}=                isText                      Log out
+    IF                          ${loggedIn}
+        ClickText               Log out                     partial_match=False
+        
+    END
 Home
     [Documentation]             Navigate to homepage, login if needed
     GoTo                        ${home_url}
