@@ -44,16 +44,6 @@ Login
         ClickText               Verify
     END
 
-Logout As
-    [Documentation]             Logout as specific user and closing second tab and switching to first tab.
-    ${loggedIn}=                isText                      Log out as
-    IF                          ${loggedIn}
-        ClickText               Log out as
-        VerifyText              New User
-        CloseWindow
-        Switchwindow            1
-    END
-
 Logout
     [Documentation]             Logout sessions
     ${loggedIn}=                isText                      Log out
@@ -159,3 +149,13 @@ Login As
     ClickText             User                        anchor=${persona}      delay=3    # wait for list to populate, then click
     VerifyText            Freeze                      
     ClickText             Login                       anchor=Freeze          delay=1      
+
+Logout As
+    [Documentation]             Logout as specific user and closing second tab and switching to first tab.
+    ${loggedIn}=                isText                      Log out as
+    IF                          ${loggedIn}
+        ClickText               Log out as
+        VerifyText              New User
+        CloseWindow
+        Switchwindow            1
+    END
