@@ -41,7 +41,6 @@ Login
     ClickText                   Log In
     
     # Uncommment with Exercise 8 MFA
-
     # MFA is only required for unknown devices or browsers, once verified it is not asked for. 
     # To enforce MFA in your SF trial, Setup -> Identity -> Identity Verification -> Require MFA for all direct UI logins to your Salesforce org
     
