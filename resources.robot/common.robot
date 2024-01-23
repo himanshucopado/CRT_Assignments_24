@@ -48,7 +48,11 @@ Logout
     [Documentation]             Logout sessions
     ${loggedIn}=                isText                      Log out
     IF                          ${loggedIn}
-        ClickText               Log out                     partial_match=False
+         ClickText    View profile
+         ClickText               Log out                     partial_match=False
+         VerifyText    Username
+         VerifyText    Password
+         VerifyText    Forgot Your Password?
         
     END
 Home
