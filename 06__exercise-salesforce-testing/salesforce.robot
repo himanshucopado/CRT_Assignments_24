@@ -66,8 +66,4 @@ Exercise 6 - Delete Tina Smith's Lead
     
 Login-Logout
     Login
-    ClickText     View profile
-    ${loggedIn}=                isText                      Log out
-    IF                          ${loggedIn}
-        ClickText               Log out                     partial_match=False 
-    END
+    Logout
