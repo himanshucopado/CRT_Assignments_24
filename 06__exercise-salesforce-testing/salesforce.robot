@@ -11,7 +11,6 @@ Exercise 6 - Entering A Lead Tina Smith
     [tags]                      Lead
     Appstate                    Home
     Launch App                  Sales
-
     ClickText                   Leads
     ${standard_active}=         IsText                      Recently Viewed             timeout=5s             delay=2s
     IF                          "${standard_active}"=="False"
