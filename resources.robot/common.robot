@@ -46,9 +46,9 @@ Login
 
 Logout
     [Documentation]             Logout sessions
+    ClickText     View profile
     ${loggedIn}=                isText                      Log out
     IF                          ${loggedIn}
-         ClickText     View profile
          ClickText     Log out                     partial_match=False
          VerifyText    Username
          VerifyText    Password
