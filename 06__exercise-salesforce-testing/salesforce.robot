@@ -53,6 +53,7 @@ Exercise 6 - Entering A Lead Tina Smith
 
 Exercise 6 - Delete Tina Smith's Lead
     [tags]                      Lead                        Git Repo Exercise
+    Appstate                    Home
     LaunchApp                   Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
