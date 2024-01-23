@@ -68,7 +68,5 @@ Login-Logout
     Login
     ${loggedIn}=                isText                      Log out
     IF                          ${loggedIn}
-        ClickText               Log out                     partial_match=False
-        
+        ClickText               Log out                     partial_match=False 
     END
-
