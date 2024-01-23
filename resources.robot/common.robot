@@ -47,14 +47,22 @@ Login
 Logout
     [Documentation]             Logout sessions
     ClickText     View profile
-    ${loggedIn}=                isText                      Log out
-    IF                          ${loggedIn}
-         ClickText     Log out                     partial_match=False
-         VerifyText    Username
-         VerifyText    Password
-         VerifyText    Forgot Your Password?
+    ClickText     Log out                     partial_match=False
+    VerifyText    Username
+    VerifyText    Password
+    VerifyText    Forgot Your Password?
+    
+# Logout
+#     [Documentation]             Logout sessions
+#     ClickText     View profile
+#     ${loggedIn}=                isText                      Log out
+#     IF                          ${loggedIn}
+#          ClickText     Log out                     partial_match=False
+#          VerifyText    Username
+#          VerifyText    Password
+#          VerifyText    Forgot Your Password?
         
-    END
+#     END
 Home
     [Documentation]             Navigate to homepage, login if needed
     GoTo                        ${home_url}
