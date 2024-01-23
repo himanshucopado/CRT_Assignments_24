@@ -53,20 +53,6 @@ Login
         ClickText               Verify
     END
 
-Login As
-    [Documentation]       Login As different persona. User needs to be logged into Salesforce with Admin rights
-    ...                   before calling this keyword to change persona.
-    ...                   Example:
-    ...                   LoginAs    Chatter Expert
-    [Arguments]           ${persona}
-    ClickText             Setup
-    ClickText             Setup for current app
-    SwitchWindow          NEW
-    TypeText              Search Setup                ${persona}             delay=2
-    ClickText             User                        anchor=${persona}      delay=3    # wait for list to populate, then click
-    VerifyText            Freeze                      
-    ClickText             Login                       anchor=Freeze          delay=1      
-
 Logout As
     [Documentation]             Logout as specific user and closing second tab and switching to first tab.
     ${loggedIn}=                isText                      Log out as
@@ -168,3 +154,17 @@ Login and Verify Code
     END
 
     SwitchWindow                1
+
+Login As
+    [Documentation]       Login As different persona. User needs to be logged into Salesforce with Admin rights
+    ...                   before calling this keyword to change persona.
+    ...                   Example:
+    ...                   LoginAs    Chatter Expert
+    [Arguments]           ${persona}
+    ClickText             Setup
+    ClickText             Setup for current app
+    SwitchWindow          NEW
+    TypeText              Search Setup                ${persona}             delay=2
+    ClickText             User                        anchor=${persona}      delay=3    # wait for list to populate, then click
+    VerifyText            Freeze                      
+    ClickText             Login                       anchor=Freeze          delay=1      
