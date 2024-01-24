@@ -87,14 +87,7 @@ Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
         Log    Enables error-specific exception handling.
     END
 
-Exercise 13 - TRY / EXCEPT: Catch any exception
-    TRY
-        Fail
-    EXCEPT
-        Log    EXCEPT with no arguments catches any exception.
-    END
-
-Exercise 130 - TRY / EXCEPT: Catch any exception
+Login-Logout03
     Run Keyword    Login
     TRY
         Verifytext    Login
