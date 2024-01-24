@@ -72,6 +72,6 @@ Login-Logout
 
 Login-Logout01                    
     Run Keyword    Login
-    Run Keyword And Expect Error    Verifytext    Login
-    Log To Console                        ${Error_Msg}
+    Run Keyword And Expect Error    STARTS: QWebElementNotFoundError:    Verifytext    Login
+    
     Logout
