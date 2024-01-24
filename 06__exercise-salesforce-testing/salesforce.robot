@@ -78,3 +78,11 @@ Login-Logout01
 Login-Logout02                   
     Run Keyword And Continue On Failure    	Fail	This is a stupid example
     Log                        	This keyword is executed	
+
+Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
+    TRY
+        Fail    Error message
+    EXCEPT    Error message
+        Log    Catches only "Error message" exceptions.
+        Log    Enables error-specific exception handling.
+    END
