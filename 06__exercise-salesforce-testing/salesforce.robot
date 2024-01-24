@@ -72,9 +72,6 @@ Login-Logout
 
 Login-Logout01                    
     Run Keyword    Login
-    TRY
-        Run Keyword    Login
-    EXCEPT
-        Log             Already logged In
-    END
+    ${Error_Msg}= Run Keyword And Return          Verifytext    Login
+    Log To Console                        Succcess
     Logout
