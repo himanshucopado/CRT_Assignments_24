@@ -76,6 +76,5 @@ Login-Logout01
     Logout
 
 Login-Logout02                   
-    Run Keyword    Login
-    Run Keyword And Expect Error    STARTS: QWebElementNotFoundError:    Verifytext    Login
-    Logout
+    Run Keyword And Continue On Failure    	Fail	This is a stupid example
+    Log                        	This keyword is executed	
