@@ -73,5 +73,5 @@ Login-Logout
 Login-Logout01                    
     Run Keyword    Login
     ${Error_Msg}= Run Keyword And Return          Verifytext    Login
-    Log To Console                        Succcess
+    Log To Console                        ${Error_Msg}
     Logout
