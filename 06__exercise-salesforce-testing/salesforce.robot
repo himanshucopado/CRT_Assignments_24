@@ -95,8 +95,10 @@ Exercise 13 - TRY / EXCEPT: Catch any exception
     END
 
 Exercise 130 - TRY / EXCEPT: Catch any exception
+    Run Keyword    Login
     TRY
-        Fail
+        Verifytext    Login
     EXCEPT
         Log    EXCEPT with no arguments catches any exception.
     END
+    Logout
