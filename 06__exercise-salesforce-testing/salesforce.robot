@@ -93,3 +93,10 @@ Exercise 13 - TRY / EXCEPT: Catch any exception
     EXCEPT
         Log    EXCEPT with no arguments catches any exception.
     END
+
+Exercise 130 - TRY / EXCEPT: Catch any exception
+    TRY
+        Fail
+    EXCEPT
+        Log    EXCEPT with no arguments catches any exception.
+    END
