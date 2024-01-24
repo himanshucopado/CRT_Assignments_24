@@ -72,6 +72,11 @@ Login-Logout
 
 Login-Logout01                    
     Run Keyword    Login
-    Run Keyword And Ignore Error          Login
+    TRY
+        Run Keyword    Login
+    EXCEPT
+        Log    EXCEPT with no arguments catches any exception.
+    END
+    
     Log To Console                        Succcess
     Logout
