@@ -69,3 +69,9 @@ Login-Logout
     Run Keyword And Ignore Error          Login
     Log To Console                        Succcess
     Logout
+
+Login-Logout01                    
+    Run Keyword    Login
+    Run Keyword And Ignore Error          Login
+    Log To Console                        Succcess
+    Logout
