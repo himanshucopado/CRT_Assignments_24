@@ -73,9 +73,8 @@ Login-Logout
 Login-Logout01                    
     Run Keyword    Login
     TRY
-        # Run Keyword    Login
-        Fail       
+        Run Keyword    Login
     EXCEPT
-        Log To Console    Already logged In
+        Log             Already logged In
     END
     Logout
