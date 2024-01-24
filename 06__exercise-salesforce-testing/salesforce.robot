@@ -75,8 +75,6 @@ Login-Logout01
     TRY
         Run Keyword    Login
     EXCEPT
-        Log    EXCEPT with no arguments catches any exception.
+        Log To Console    Already logged In
     END
-    
-    Log To Console                        Succcess
     Logout
