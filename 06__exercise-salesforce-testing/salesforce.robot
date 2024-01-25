@@ -110,3 +110,5 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
 Exercise 13 - TRY / EXCEPT: Capture the error message 01
     [tags]                      Exception
     Run Keyword    Login
+    Run Keyword    Logout
+    Run Keyword    Logout
