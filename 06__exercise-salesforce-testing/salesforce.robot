@@ -101,6 +101,6 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
     TRY
         Verifytext    Login
     EXCEPT    AS    ${error_message}
-        Log    ${error_message}
+        Log To Console    ${error_message}
     END
     Logout
