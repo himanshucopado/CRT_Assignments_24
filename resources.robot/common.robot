@@ -58,8 +58,8 @@ Logout
     ${loggedIn}=                isText                      Log Out
     IF                          ${loggedIn}
         ClickText               Log Out                     partial_match=False 
+        VerifyText    Log In
     END
-    VerifyText    Log In
 Home
     [Documentation]             Navigate to homepage, login if needed
     GoTo                        ${home_url}
