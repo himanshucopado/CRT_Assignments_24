@@ -79,7 +79,7 @@ Login-Logout02
     Run Keyword And Continue On Failure    	Fail	This is a stupid example
     Log                        	This keyword is executed	
 
-Login-Logout03
+Exercise 13 - TRY / EXCEPT: Catch any exception
     Run Keyword    Login
     TRY
         Verifytext    Login
