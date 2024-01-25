@@ -96,6 +96,8 @@ Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
         Log    Enables error-specific exception handling.
     END
 
+Exercise 13 - TRY / EXCEPT: Capture the error message  
+    Run Keyword    Login
     TRY
         Fail    Goodbye, world!
     EXCEPT    AS    ${error_message}
