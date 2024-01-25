@@ -113,6 +113,7 @@ Download and save SF report
     ClickText    Files
     UseTable    SortTitle
     ClickCell    r1c4
+    ExpectFileDownload
     ClickText    Download
     ${file_path} =              VerifyFileDownload    timeout=20s
     Save File    ${file_path}    filename=SalesforceReport.pdf    path=C:\Users\HimanshuSharma\Desktop\CRT_Training
