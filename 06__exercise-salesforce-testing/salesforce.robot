@@ -64,7 +64,8 @@ Exercise 6 - Delete Tina Smith's Lead
     Log Screenshot
     CloseAllBrowsers
 
-Login-Logout                    
+Login-Logout   
+    [tags]                      Exception
     Run Keyword    Login
     Run Keyword And Ignore Error          Verifytext    Login
     Log To Console                        Succcess
