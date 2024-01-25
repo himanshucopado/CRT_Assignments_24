@@ -112,3 +112,10 @@ Exercise 13 - TRY / EXCEPT: Capture the error message 01
     Run Keyword    Login
     Run Keyword    Logout
     Run Keyword    Logout
+        
+    ${loggedIn}=                isText                      View profile
+    IF                          ${loggedIn}
+        ClickText               View profile
+        ClickText               Log Out                     partial_match=False 
+        VerifyText    Log In
+    END
