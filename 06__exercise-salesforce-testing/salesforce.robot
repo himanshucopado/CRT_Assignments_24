@@ -106,3 +106,8 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
     EXCEPT    AS    ${error_message}
         Log To Console    ${error_message}
     END
+
+Exercise 13 - TRY / EXCEPT: Capture the error message 01
+    [tags]                      Exception
+    Run Keyword    Login
+    Run Keyword    Logout
