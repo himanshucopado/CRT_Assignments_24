@@ -106,3 +106,6 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
     EXCEPT    AS    ${error_message}
         Log To Console    ${error_message}
     END        
+
+Download and save SF report
+    
