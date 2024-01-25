@@ -58,7 +58,7 @@ Logout
     IF                          ${loggedIn}
         ClickText               View profile
         ClickText               Log Out                     partial_match=False 
-        VerifyText    Log In
+        VerifyText              Log In
     END
 Home
     [Documentation]             Navigate to homepage, login if needed
