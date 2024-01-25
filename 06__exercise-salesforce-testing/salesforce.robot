@@ -103,3 +103,4 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
     EXCEPT    AS    ${error_message}
         Log    ${error_message}
     END
+    Logout
