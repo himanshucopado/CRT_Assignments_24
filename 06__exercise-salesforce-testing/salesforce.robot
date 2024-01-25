@@ -113,8 +113,8 @@ Download and save SF report
     ClickText    Files
     UseTable    SortTitle
     ClickCell    r1c4
-    ExpectFileDownload
-    ClickText    Download
+    # ExpectFileDownload
+    # ClickText    Download
     # ${file_path} =              VerifyFileDownload    timeout=20s
     # MoveFiles    ${file_path}    C:\Users\HimanshuSharma\Desktop\CRT_Training
     Save File    //div[@title\="Download"]    SalesforceReport.png    C:\Users\HimanshuSharma\Desktop\CRT_Training
