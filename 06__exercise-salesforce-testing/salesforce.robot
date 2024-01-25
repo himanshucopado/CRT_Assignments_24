@@ -99,7 +99,7 @@ Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
 Exercise 13 - TRY / EXCEPT: Capture the error message  
     Run Keyword    Login
     TRY
-        Fail    Goodbye, world!
+        Verifytext    Login
     EXCEPT    AS    ${error_message}
-        Log    ${error_message}    # Goodbye, world!
+        Log    ${error_message}
     END
