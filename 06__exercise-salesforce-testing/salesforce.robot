@@ -105,17 +105,4 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
         Verifytext    Login
     EXCEPT    AS    ${error_message}
         Log To Console    ${error_message}
-    END
-
-Exercise 13 - TRY / EXCEPT: Capture the error message 01
-    [tags]                      Exception
-    Run Keyword    Login
-    Run Keyword    Logout
-    Run Keyword    Logout
-        
-    ${loggedIn}=                isText                      View profile
-    IF                          ${loggedIn}
-        ClickText               View profile
-        ClickText               Log Out                     partial_match=False 
-        VerifyText    Log In
-    END
+    END        
