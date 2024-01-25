@@ -69,13 +69,11 @@ Login-Logout
     Run Keyword    Login
     Run Keyword And Ignore Error          Verifytext    Login
     Log To Console                        Succcess
-    Logout
 
 Login-Logout01                    
     [tags]                      Exception
     Run Keyword    Login
     Run Keyword And Expect Error    STARTS: QWebElementNotFoundError:    Verifytext    Login
-    Logout
 
 Login-Logout02                   
     [tags]                      Exception
@@ -90,7 +88,6 @@ Exercise 13 - TRY / EXCEPT: Catch any exception
     EXCEPT
         Log    Already Logged in
     END
-    Logout
     
 Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
     [tags]                      Exception
@@ -100,7 +97,6 @@ Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
     EXCEPT   QWebElementNotFoundError: Unable to find element for locator Login in 30.0 sec
         Log To Console    Catches the exception
     END
-    Logout
 
 Exercise 13 - TRY / EXCEPT: Capture the error message  
     [tags]                      Exception
@@ -110,4 +106,3 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
     EXCEPT    AS    ${error_message}
         Log To Console    ${error_message}
     END
-    Logout
