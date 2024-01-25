@@ -116,7 +116,7 @@ Download and save SF report
     ExpectFileDownload
     # ClickText    Download
     # ${file_path} =              VerifyFileDownload    timeout=20s
-    Save File    Download    filename=SalesforceReport.png    path=C:\Users\HimanshuSharma\Desktop\CRT_Training
+    Save File    Download    SalesforceReport.png    C:\Users\HimanshuSharma\Desktop\CRT_Training
     Log    File has been saved to: ${file_path}
         
 
