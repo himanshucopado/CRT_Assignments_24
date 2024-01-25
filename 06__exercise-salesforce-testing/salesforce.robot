@@ -112,7 +112,7 @@ Download and save SF report
     ClickText    Data
     ClickText    Files
     UseTable    SortTitle
-    # ClickCell    r1c4
+    ClickCell    r1c4
     # ExpectFileDownload
     # ClickText    Download
     # ${file_path} =              VerifyFileDownload    timeout=20s
