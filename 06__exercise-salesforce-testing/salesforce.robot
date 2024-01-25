@@ -109,3 +109,9 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
 
 Download and save SF report
     Appstate                    Home
+    ClickText    Data
+    ClickText    Files
+    UseTable    SortTitle
+    ClickCell    r1c4
+    ClickText    Download
+    CloseWindow
