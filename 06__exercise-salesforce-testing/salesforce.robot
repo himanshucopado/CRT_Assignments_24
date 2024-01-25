@@ -95,3 +95,9 @@ Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
         Log    Catches only "Error message" exceptions.
         Log    Enables error-specific exception handling.
     END
+
+    TRY
+        Fail    Goodbye, world!
+    EXCEPT    AS    ${error_message}
+        Log    ${error_message}    # Goodbye, world!
+    END
