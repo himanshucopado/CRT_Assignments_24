@@ -89,12 +89,13 @@ Login-Logout03
     Logout
     
 Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
+    Run Keyword    Login
     TRY
-        Fail    Error message
-    EXCEPT    Error message
-        Log    Catches only "Error message" exceptions.
-        Log    Enables error-specific exception handling.
+        Verifytext    Login
+    EXCEPT   QWebElementNotFoundError: Unable to find element for locator Login in 30.0 sec
+        Log To Console    Catches the exception
     END
+    Logout
 
 Exercise 13 - TRY / EXCEPT: Capture the error message  
     Run Keyword    Login
