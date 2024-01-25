@@ -72,15 +72,18 @@ Login-Logout
     Logout
 
 Login-Logout01                    
+    [tags]                      Exception
     Run Keyword    Login
     Run Keyword And Expect Error    STARTS: QWebElementNotFoundError:    Verifytext    Login
     Logout
 
 Login-Logout02                   
+    [tags]                      Exception
     Run Keyword And Continue On Failure    	Fail	This is a stupid example
     Log                        	This keyword is executed	
 
 Exercise 13 - TRY / EXCEPT: Catch any exception
+    [tags]                      Exception
     Run Keyword    Login
     TRY
         Verifytext    Login
@@ -90,6 +93,7 @@ Exercise 13 - TRY / EXCEPT: Catch any exception
     Logout
     
 Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
+    [tags]                      Exception
     Run Keyword    Login
     TRY
         Verifytext    Login
@@ -99,6 +103,7 @@ Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
     Logout
 
 Exercise 13 - TRY / EXCEPT: Capture the error message  
+    [tags]                      Exception
     Run Keyword    Login
     TRY
         Verifytext    Login
