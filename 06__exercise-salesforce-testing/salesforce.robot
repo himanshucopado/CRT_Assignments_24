@@ -84,7 +84,7 @@ Login-Logout03
     TRY
         Verifytext    Login
     EXCEPT
-        Log    EXCEPT with no arguments catches any exception.
+        Log    Already Logged in
     END
     Logout
     
