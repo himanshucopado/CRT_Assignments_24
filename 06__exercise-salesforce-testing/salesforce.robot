@@ -120,6 +120,3 @@ Download and save SF report
     # MoveFiles    ${file_path}    C:/Users/HimanshuSharma/Desktop/CRT_Training
     # Save File    //div[@title\="Download"]    SalesforceReport.png    C:\Users\HimanshuSharma\Desktop\CRT_Training    parent=a
     # Log    File has been saved to: ${file_path}
-        
-
-    CloseWindow
