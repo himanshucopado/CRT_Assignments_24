@@ -5,6 +5,7 @@ ${my_var}     my_value
 
 *** Test Cases ***
 Exercise 7 - Variables Section
+[]
     Log To Console    ${my_var}
     Log To Console    ${my_list}
     Log To Console   ${my_dict}
