@@ -5,6 +5,7 @@ Variables    DynamicVariables.py
 
 *** Test Cases ***
 Exercise 7 - Variable Files Access Python Variables
+    [Tags]    Externalvar
     Log   ${TestEnv.ip}
     Log    ${TestEnv.roles}
     Log Many   @{TestEnv.roles}
@@ -16,12 +17,14 @@ Exercise 7 - Variable Files Access Python Variables
     END
 
 Exercise 7 - Variable Files Access Yaml Variables
+    [Tags]    Externalvar
     Log        ${base_url}
     Log Many   @{yaml_list}
     Log        ${yaml_dict}
     Log        ${yaml_dict}[key_1]
 
 Exercise 7 - Variable Files Access Dynamic Variables
+    [Tags]    Externalvar
     Log   ${RANDOM_INT}
     Log   ${CURRENT_TIME}
     Log   ${AFTERNOON}
@@ -29,6 +32,7 @@ Exercise 7 - Variable Files Access Dynamic Variables
     Log   ${AREA2}
 
 Exercise 7 - Variable Files Use variable file with argument value dev
+    [Tags]    Externalvar
     Import Variables	${CURDIR}/EnvVariables.py    dev
     Log            ${scalar}
     Log            ${list}
@@ -38,6 +42,7 @@ Exercise 7 - Variable Files Use variable file with argument value dev
     END
 
 Exercise 7 - Variable Files Use variable file with argument value uat
+    [Tags]    Externalvar
     Import Variables	${CURDIR}/EnvVariables.py    uat
     Log            ${scalar}
     Log            ${list}
