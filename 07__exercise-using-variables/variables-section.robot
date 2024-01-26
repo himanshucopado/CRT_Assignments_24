@@ -6,22 +6,22 @@ ${my_var}     my_value
 *** Test Cases ***
 Exercise 7 - Variables Section
     [Tags]    variable
-    Log To Console    ${my_var}
-    Log To Console    ${my_list}
-    Log To Console   ${my_dict}
+    Log    ${my_var}
+    Log    ${my_list}
+    Log   ${my_dict}
     FOR    ${item}    IN    @{my_list}
-        Log To Console   ${item}
+        Log   ${item}
     END
-    Log To Console  ${my_dict}[name]
-    Log To Console   ${my_dict}[password]
+    Log  ${my_dict}[name]
+    Log   ${my_dict}[password]
     FOR   ${key}    ${value}    IN    &{my_dict}
         Log Many    ${key}    ${value}
     END
     My Keyword
     
-    Log To Console      Suitvariable
-    Log To Console      Robotvariable
-    Log To Console      ProjectVariable      
+    Log      Suitvariable
+    Log      Robotvariable
+    Log      ProjectVariable      
 
 
 *** Keywords ***
