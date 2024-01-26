@@ -66,11 +66,9 @@ Exercise 6 - Delete Tina Smith's Lead
 
 Login-Logout   
     [tags]                      Exception
-    [Setup]
     Run Keyword    Login
     Run Keyword And Ignore Error          Verifytext    Login
     Log To Console                        Succcess
-    [Teardown]
 
 Login-Logout01                    
     [tags]                      Exception
