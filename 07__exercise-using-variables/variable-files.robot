@@ -1,7 +1,7 @@
 *** Settings ***
 Variables    PythonVariables.py
 Variables    YamlVariables.yaml
-Variables    DynamicVariables.py
+Variables    dynamicvariables.py
 
 *** Test Cases ***
 Exercise 7 - Variable Files Access Python Variables
