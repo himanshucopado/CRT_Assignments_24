@@ -44,6 +44,15 @@ Login
         TypeSecret              Verification Code           ${mfa_code}
         ClickText               Verify
     END
+
+Logout
+    [Documentation]             Logout sessions
+     ${loggedIn}=                isText                      View profile
+    IF                          ${loggedIn}
+        ClickText               View profile
+        ClickText               Log Out                     partial_match=False 
+        VerifyText              Log In
+    END
 Create Lead Step 1 Grouping
     Launch App                  Sales
     ClickText                   Leads
