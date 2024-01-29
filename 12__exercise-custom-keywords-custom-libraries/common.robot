@@ -1,6 +1,8 @@
 *** Settings ***
-Library    QForce
-Library    QWeb
+Library                         QWeb
+Library                         QForce
+Library                         String
+Library                         Collections
 *** Keywords ***
 
 ##############################################################################################################################
