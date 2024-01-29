@@ -5,6 +5,7 @@ Library                         DateTime
 Library                         String
 Library                         BuiltIn
 Suite Setup                     Open Browser                about:blank                 chrome
+Test Teardown                   Run Keyword    Logout
 Suite Teardown                  Close All Browsers
 
 # In this exercise we use the same salesforce scenario built with exercise 6.
