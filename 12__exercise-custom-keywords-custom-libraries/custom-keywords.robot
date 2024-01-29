@@ -1,5 +1,5 @@
 *** Settings ***
-Resource                        /common.robot
+Resource                        ../12__exercise-custom-keywords-custom-libraries/common.robot
 Library                         QWeb
 Library                         DateTime
 Library                         String
