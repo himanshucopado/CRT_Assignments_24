@@ -1,9 +1,5 @@
 *** Settings ***
 Library                       ../12__exercise-custom-keywords-custom-libraries/Libraries/ustomLib.py
-Library                       ../libraries/BuilderPatternAccount.py
-Resource                      ../resources/common.robot
-Suite Setup                   Setup Browser
-Suite Teardown                Close All Browser Sessions
 
 *** Test Cases ***
 
