@@ -1,5 +1,6 @@
 *** Settings ***
 Library                       ../12__exercise-custom-keywords-custom-libraries/Libraries/ustomLib.py
+Resource                        ../12__exercise-custom-keywords-custom-libraries/common.robot
 Suite Setup                     Open Browser                about:blank                 chrome
 Suite Teardown                  Close All Browsers
 *** Test Cases ***
