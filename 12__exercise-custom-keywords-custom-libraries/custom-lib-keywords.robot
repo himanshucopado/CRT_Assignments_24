@@ -7,4 +7,4 @@ Suite Teardown                  Close All Browsers
 
 Exercise 12 - Test the Custom Keyword from the Custom Library BuilderPatternAccount.
     ${random_email}     Generate Random Emails    ${8}
-    Log                 ${random_email}
+    Log To Console      ${random_email}
