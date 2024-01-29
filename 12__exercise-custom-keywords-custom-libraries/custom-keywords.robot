@@ -1,5 +1,7 @@
 *** Settings ***
 Resource                        /common.robot
+Library                         QForce
+Library                         QWeb
 Suite Setup                     Setup Browser
 Suite Teardown                  Close All Browser Sessions
 
