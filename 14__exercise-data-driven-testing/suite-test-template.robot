@@ -25,10 +25,10 @@ Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Fixed 
 #     Verify Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}               ${first_name}             ${phone}                    ${title}                    ${email}                    ${website}                  ${lead_source}
 #     Delete Lead                 ${first_name}               ${last_name}
 
-# Unique Test Data
-#     ${Last_Name}=               Last Name
-#     Set Suite Variable          ${last_name}                ${Last Name}
-#     ${Company}=                 Company
-#     Set Suite Variable          ${company}                  ${Company}
-#     ${First_Name}=              First Name
-#     Set Suite Variable          ${first_name}               ${First_Name}   
+Unique Test Data
+    ${Last_Name}=               Last Name
+    Set Suite Variable          ${last_name}                ${Last Name}
+    ${Company}=                 Company
+    Set Suite Variable          ${company}                  ${Company}
+    ${First_Name}=              First Name
+    Set Suite Variable          ${first_name}               ${First_Name}   
