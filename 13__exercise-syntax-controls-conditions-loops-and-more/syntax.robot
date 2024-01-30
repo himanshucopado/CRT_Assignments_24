@@ -131,6 +131,7 @@ Exercise 13 - Access the items in a sequence (list, string)
     Log To Console    ${string}[0]    # H
     Log To Console   ${string}[:5]    # Hello
     Log To Console   ${string}[6:]    # world!
+    Log To Console   ${string}[5:]    # world!
     Log To Console   ${string}[-1]    # !
     Log To Console   ${string}[1]    # !
     Log To Console   ${string}[2]    # !
