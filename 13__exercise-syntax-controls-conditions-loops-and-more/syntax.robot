@@ -132,7 +132,15 @@ Exercise 13 - Access the items in a sequence (list, string)
     Log To Console   ${string}[6:]    # world!
     Log To Console   ${string}[-1]    # !
     Log To Console   ${string}[1]    # !
+    Log To Console   ${string}[2]    # !
+    Log To Console   ${string}[3]    # !
+    Log To Console   ${string}[4]    # !
+    Log To Console   ${string}[5]    # !
     Log To Console   ${string}[6]    # !
+    Log To Console   ${string}[7]    # !
+    Log To Console   ${string}[8]    # !
+    Log To Console   ${string}[9]    # !
+    Log To Console   ${string}[10]    # !
     @{list}=    Create List    one    two    three    four    five
     Log    ${list}    # ['one', 'two', 'three', 'four', 'five']
     Log    ${list}[0:6:2]    # ['one', 'three', 'five']
