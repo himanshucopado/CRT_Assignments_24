@@ -18,7 +18,7 @@ Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Fixed 
     [Tags]    createlead
     Create Lead          Working              Smith                         Growmore       Ms.    Tina
 
-# *** Keywords ***
+*** Keywords ***
 
 # Create Verify and Delete Lead End to End
 #     [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}               ${first_name}             ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
