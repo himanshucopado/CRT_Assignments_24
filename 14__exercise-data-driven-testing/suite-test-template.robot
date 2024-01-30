@@ -10,8 +10,8 @@ Suite Teardown                  Close All Browser Sessions
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
 *** Test Cases ***
-# Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Unique Data         
-#     Create Lead    Working              ${last_name}                  ${company}     ${first_name}  Ms.
+Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Unique Data         
+    Create Lead    Working              ${last_name}                  ${company}     ${first_name}  Ms.
 
 Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Fixed Data
     [Tags]    createlead
