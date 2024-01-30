@@ -144,8 +144,8 @@ Exercise 13 - Access the items in a sequence (list, string)
     Log To Console   ${string}[9]    # !
     Log To Console   ${string}[10]    # !
     @{list}=    Create List    one    two    three    four    five
-    Log    ${list}    # ['one', 'two', 'three', 'four', 'five']
-    Log    ${list}[0:6:2]    # ['one', 'three', 'five']
+    Log To Console   ${list}    # ['one', 'two', 'three', 'four', 'five']
+    Log To Console   ${list}[0:6:2]    # ['one', 'three', 'five']
 
 Exercise 13 - Split arguments to multiple lines
     A keyword with any number of arguments
