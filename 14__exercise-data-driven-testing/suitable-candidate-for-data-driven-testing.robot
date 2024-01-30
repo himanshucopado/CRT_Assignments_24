@@ -1,5 +1,5 @@
 *** Settings ***
-Resource                      ../resources.robot/common.robot
+Resource                      ../resources/common.robot
 Suite Setup                   Setup Browser
 Suite Teardown                Close All Browser Sessions
 
