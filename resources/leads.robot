@@ -14,8 +14,7 @@ Create Lead
     ClickText                   New                         anchor=Import               delay=3s
     VerifyText                  Lead Information
     UseModal                    On                          # Only find fields from open modal dialog
-    Picklist                    Salutation                  ${salutation}
-    # Run Keyword If              '${salutation}'!='${EMPTY}'                             Picklist               Salutation                  ${salutation}                       #optional
+    Run Keyword If              '${salutation}'!='${EMPTY}'                             Picklist               Salutation                  ${salutation}                       #optional
     Run Keyword If              '${first_name}'!='${EMPTY}'                             TypeText               First Name                  ${first_name}                      #optional
     TypeText                    Last Name                   ${last_name}                #mandatory
     Picklist                    Lead Status                 ${lead_status}              #mandatory
