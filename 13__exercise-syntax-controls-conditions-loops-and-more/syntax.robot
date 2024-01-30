@@ -106,6 +106,7 @@ Exercise 13 - Create a scalar variable
     ${animal}=    Set Variable    dog
     Log To Console   ${animal}    # dog
     Log To Console   ${animal}[0]    # d
+    Log To Console   ${animal}[1]    # d
     Log To Console   ${animal}[-1]    # g
 
 Exercise 13 - Create a number variable
