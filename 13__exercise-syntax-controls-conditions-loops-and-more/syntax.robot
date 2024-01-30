@@ -104,9 +104,9 @@ Exercise 13 - Continue a loop from the next iteration on condition
 
 Exercise 13 - Create a scalar variable
     ${animal}=    Set Variable    dog
-    Log    ${animal}    # dog
-    Log    ${animal}[0]    # d
-    Log    ${animal}[-1]    # g
+    Log To Console   ${animal}    # dog
+    Log To Console   ${animal}[0]    # d
+    Log To Console   ${animal}[-1]    # g
 
 Exercise 13 - Create a number variable
     ${Ï€}=    Set Variable    ${3.14}
