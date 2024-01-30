@@ -1,6 +1,6 @@
 *** Settings ***
 Library                         ../12__exercise-custom-keywords-custom-libraries/Libraries/CustomLib.py
-# Resource                        ../12__exercise-custom-keywords-custom-libraries/common.robot
+Resource                        ../12__exercise-custom-keywords-custom-libraries/common.robot
 Suite Setup                    
 Suite Teardown
 *** Test Cases ***
