@@ -12,8 +12,9 @@ Test Template                   Create Verify and Delete Lead End to End
 *** Test Cases ***                                                                            lead_status         last_name                      company        first_name     salutation
 Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Unique Data         
     Create Lead    Working              ${last_name}                  ${company}     ${first_name}  Ms.
-Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Fixed Data          Working              Smith                         Growmore       Tina           Ms.
 
+Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Fixed Data
+    Create Lead          Working              Smith                         Growmore       Tina           Ms.
 
 *** Keywords ***
 
