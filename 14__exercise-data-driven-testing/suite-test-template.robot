@@ -14,7 +14,7 @@ Suite Teardown                  Close All Browser Sessions
 #     Create Lead    Working              ${last_name}                  ${company}     ${first_name}  Ms.
 
 Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Fixed Data
-    [Tags]    craetelead
+    [Tags]    createlead
     Create Lead          Working              Smith                         Growmore       Ms.    Tina
 
 # *** Keywords ***
