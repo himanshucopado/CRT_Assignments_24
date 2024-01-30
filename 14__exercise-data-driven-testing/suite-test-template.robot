@@ -17,32 +17,6 @@ Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Fixed 
     [Tags]    craetelead
     Create Lead          Working              Smith                         Growmore       Tina           Ms.
 
-Create Lead 
-    Launch App                  Sales
-    ClickText                   Leads
-    ${standard_active}=         IsText                      Recently Viewed             timeout=5s             delay=2s
-    IF                          "${standard_active}"=="False"
-        ClickText               List View
-    END
-    VerifyText                  Recently Viewed             timeout=120s
-    ClickText                   New                         anchor=Import               delay=3s
-    VerifyText                  Lead Information
-    UseModal                    On                          # Only find fields from open modal dialog
-    Run Keyword If              '${salutation}'!='${EMPTY}'                             Picklist               Salutation                  ${salutation}                       #optional
-    Run Keyword If              '${first_name}'!='${EMPTY}'                             TypeText               First Name                  ${first_name}                      #optional
-    TypeText                    Last Name                   ${last_name}                #mandatory
-    Picklist                    Lead Status                 ${lead_status}              #mandatory
-    Run Keyword If              '${phone}'!='${EMPTY}'      TypeText                    Phone                  ${phone}             First Name                #optional
-    TypeText                    Company                     ${company}                  Last Name              #mandatory
-    Run Keyword If              '${title}'!='${EMPTY}'      TypeText                    Title                  ${title}                     Address Information       #optional
-    Run Keyword If              '${email}'!='${EMPTY}'      TypeText                    Email                  ${email}        Rating                    #optional
-    Run Keyword If              '${website}'!='${EMPTY}'    TypeText                    Website                ${website}                             #optional
-    Run Keyword If              '${lead_source}'!='${EMPTY}'                            Picklist               Lead Source                 ${lead_source}             #optional
-    ClickText                   Save                        partial_match=False
-    UseModal                    Off
-    Sleep                       2
-    Log Screenshot
-
 # *** Keywords ***
 
 # Create Verify and Delete Lead End to End
