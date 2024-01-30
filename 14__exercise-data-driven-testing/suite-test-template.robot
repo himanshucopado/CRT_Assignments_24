@@ -14,6 +14,7 @@ Test Template                   Create Verify and Delete Lead End to End
 #     Create Lead    Working              ${last_name}                  ${company}     ${first_name}  Ms.
 
 Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Fixed Data
+    [Tags]    craetelead
     Create Lead          Working              Smith                         Growmore       Tina           Ms.
 
 *** Keywords ***
