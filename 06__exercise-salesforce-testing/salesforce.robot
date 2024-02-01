@@ -107,6 +107,7 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
     END
 
 Download and save SF report
+    [Tags]                    Download
     Appstate                    Home
     ClickText                   Data
     ClickText                   Files
