@@ -7,6 +7,7 @@ Suite Setup                     Setup Browser
 Test Setup                      Run Keywords                Home                        Unique Test Data
 Suite Teardown                  Close All Browser Sessions
 Test Template                   Create Verify and Delete Lead End to End
+Force Tags                      data-tests01
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
