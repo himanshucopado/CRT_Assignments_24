@@ -13,6 +13,7 @@ Force Tags                      data-tests01
 
 *** Test Cases ***
 # Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template with ${lead_status} ${last_name} ${company} ${first_name} ${salutation}
+Create Verify and Delete Lead End to End with ${lead_status} ${last_name} ${company} ${first_name} ${salutation}
 #     [Tags]    csv
 
 *** Keywords ***
