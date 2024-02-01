@@ -7,13 +7,13 @@ Suite Setup                     Setup Browser
 Test Setup                      Run Keywords                Home                        Unique Test Data
 Suite Teardown                  Close All Browser Sessions
 Test Template                   Create Verify and Delete Lead End to End
-# Force Tags                      data-tests01
+Force Tags                      data-tests01
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
-*** Test Cases ***
-Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template with ${lead_status} ${last_name} ${company} ${first_name} ${salutation}
-    [Tags]    csv
+# *** Test Cases ***
+# Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template with ${lead_status} ${last_name} ${company} ${first_name} ${salutation}
+#     [Tags]    csv
 
 *** Keywords ***
 
