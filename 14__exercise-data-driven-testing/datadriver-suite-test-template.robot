@@ -13,6 +13,7 @@ Test Template                   Create Verify and Delete Lead End to End
 
 *** Test Cases ***
 Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template with ${lead_status} ${last_name} ${company} ${first_name} ${salutation}
+[tag]    csv
 
 *** Keywords ***
 
