@@ -24,7 +24,7 @@ Exercise 14 - Data Driven Testing - Create Verify and Delete Lead End to End
 *** Keywords ***
 
 Create Verify and Delete Lead End to End
-    [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}               ${first_name}             ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}               ${first_name}             ${phone}                    ${title}                    ${email}                    ${website}                  ${lead_source}
     Create Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}               ${first_name}             ${phone}                    ${title}                    ${email}                    ${website}                  ${lead_source}
     Verify Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}               ${first_name}             ${phone}                    ${title}                    ${email}                    ${website}                  ${lead_source}
     Delete Lead                 ${first_name}               ${last_name}
