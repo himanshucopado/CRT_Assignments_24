@@ -119,7 +119,7 @@ Download and save SF report
     Log to console              File has been saved to: ${file_path}
     OpenWindow
     SwitchWindow                NEW
-    GoTo                        ${file_path}
+    GoTo                        file://${file_path}
     # MoveFiles                 ${file_path}                C:/Users/HimanshuSharma/Desktop/CRT_Training
     # Save File                 //div[@title\="Download"]                               SalesforceReport.png                 C:\Users\HimanshuSharma\Desktop\CRT_Training    parent=a
     # Log                       File has been saved to: ${file_path}
