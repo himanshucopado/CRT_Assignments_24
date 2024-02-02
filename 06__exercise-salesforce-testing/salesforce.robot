@@ -119,7 +119,6 @@ Download and save SF report
     UseModal                    On
     ExpectFileDownload
     ClickText                   Export                      partial_match=False    tag=button
-    Sleep                       2s
     ${file_path} =              VerifyFileDownload          timeout=20s
     Log to console              File has been saved to: ${file_path}
     UseModal                    Off
