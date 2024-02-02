@@ -139,8 +139,7 @@ Download and save SF report
     Sleep                       2s
     GoTo                        file:/${downloads_folder}/${pdf_file}
     GoTo                        file:/${EXECDIR}/../../Downloads/${pdf_file}
- 
-    # GoTo                        file://${file_path}
+    GoTo                        file://${file_path}
     VerifyText                  Marketing Exec Leads by Source                          recognition_mode=Vision       
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
