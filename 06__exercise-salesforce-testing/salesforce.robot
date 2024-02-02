@@ -121,9 +121,6 @@ Download and save SF report
     ClickElement                //button[@title\="Export"]
     ${file_path} =              VerifyFileDownload          timeout=20s
     Log to console              File has been saved to: ${file_path}
-    OpenWindow
-    SwitchWindow              NEW
-    GoTo                      file://${file_path}
     UseModal                    Off
     # IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
     #     ${downloads_folder}=    Set Variable                /home/executor/Downloads
@@ -147,6 +144,7 @@ Download and save SF report
     
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
+    file://home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-14-13-01.xlsx
 Download and save SF report01
     Appstate                  Home
     ClickText                 Data
