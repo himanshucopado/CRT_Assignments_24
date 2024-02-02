@@ -130,19 +130,14 @@ Download and save SF report
     @{downloads}=               List Files In Directory     ${downloads_folder}
     ${downloaded_file}=                Get From List               ${downloads}                0
     Log                         Downloaded Filename: ${downloaded_file}
-    # OpenWindow
-    # SwitchWindow                NEW
-    # Sleep                       2s
-    # GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
-    Move File                   ${downloads_folder}/${downloaded_file}                         ${OUTPUT_DIR}
-    Sleep                       2s
-    @{outputs}=                   List Files In Directory     ${OUTPUT_DIR}
-    # LogScreenshot
-    ${output_file}=             Get From List                 ${outputs}                        1
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
-    GoTo                        file:/${OUTPUT_DIR}/${output_file}
+    GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
+    Move File                   ${downloads_folder}/${downloaded_file}                         ${OUTPUT_DIR}
+    Sleep                       2s
+    @{outputs}=                   List Files In Directory     ${OUTPUT_DIR}
+    LogScreenshot
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
 
