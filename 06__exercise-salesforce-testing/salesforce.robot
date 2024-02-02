@@ -157,7 +157,7 @@ Download and save SF report
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
-    GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
+    GoTo                        file://${EXECDIR}/../../Downloads/${downloaded_file}
     Move File                   ${downloads_folder}/${downloaded_file}                  ${OUTPUT_DIR}
     Sleep                       2s
     @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
