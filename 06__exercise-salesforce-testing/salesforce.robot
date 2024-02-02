@@ -122,25 +122,25 @@ Download and save SF report
     ${file_path} =              VerifyFileDownload          timeout=20s
     Log to console              File has been saved to: ${file_path}
     UseModal                    Off
-    # IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
-    #     ${downloads_folder}=    Set Variable                /home/executor/Downloads
-    # ELSE                                                                                # Live Testing environment
-    #     ${downloads_folder}=    Set Variable                /home/services/Downloads
-    # END
-    # @{downloads}=               List Files In Directory     ${downloads_folder}
-    # ${pdf_file}=                Get From List               ${downloads}                0
-    # Log                         PDF Filename: ${pdf_file}
-    # OpenWindow
-    # SwitchWindow                NEW
-    # Sleep                       2s
-    # # GoTo                        file://${EXECDIR}/../../Downloads/${pdf_file}
-    # GoTo                        file://${downloads_folder}/${pdf_file}
-    # # GoTo                        file://${file_path}
-    # VerifyText                  Marketing Exec Leads by Source                          recognition_mode=Vision              timeout=2
-    # Move File                   ${downloads_folder}/${pdf_file}                         ${OUTPUT_DIR}
-    # Sleep                       2s
-    # List Files In Directory     ${OUTPUT_DIR}
-    # LogScreenshot
+    IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
+        ${downloads_folder}=    Set Variable                /home/executor/Downloads
+    ELSE                                                                                # Live Testing environment
+        ${downloads_folder}=    Set Variable                /home/services/Downloads
+    END
+    @{downloads}=               List Files In Directory     ${downloads_folder}
+    ${pdf_file}=                Get From List               ${downloads}                0
+    Log                         PDF Filename: ${pdf_file}
+    OpenWindow
+    SwitchWindow                NEW
+    Sleep                       2s
+    # GoTo                        file://${EXECDIR}/../../Downloads/${pdf_file}
+    GoTo                        file://${downloads_folder}/${pdf_file}
+    # GoTo                        file://${file_path}
+    VerifyText                  Marketing Exec Leads by Source                          recognition_mode=Vision              timeout=2
+    Move File                   ${downloads_folder}/${pdf_file}                         ${OUTPUT_DIR}
+    Sleep                       2s
+    List Files In Directory     ${OUTPUT_DIR}
+    LogScreenshot
     
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
