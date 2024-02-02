@@ -1,6 +1,8 @@
 *** Settings ***
 Resource                        ../resources.robot/common.robot
 Library                         QForce
+Library                         QWeb
+Library                         QWeb
 Suite Setup                     Setup Browser
 Test Teardown                   Run Keyword                 Logout
 Suite Teardown                  Close All Browser Sessions
