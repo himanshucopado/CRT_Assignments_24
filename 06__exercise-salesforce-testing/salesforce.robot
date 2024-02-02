@@ -114,6 +114,7 @@ Download and save SF report
     ClickText                   More Actions
     ClickText                   Export
     UseModal                    On
+    ExpectFileDownload
     ClickText                   Export                      partial_match=False
     UseModal                    Off
     CloseWindow
