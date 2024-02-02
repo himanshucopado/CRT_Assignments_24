@@ -144,7 +144,7 @@ Download and save SF report
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
 Download and save SF report01
-    Appstate                    Home
+    Appstate                  Home
     ClickText                 Data
     ClickText                 Files
     UseTable                  SortTitle
