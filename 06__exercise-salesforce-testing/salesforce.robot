@@ -2,7 +2,7 @@
 Resource                        ../resources.robot/common.robot
 Library                         QForce
 Library                         QWeb
-Library                         QWeb
+Library                         OperatingSystem
 Suite Setup                     Setup Browser
 Test Teardown                   Run Keyword                 Logout
 Suite Teardown                  Close All Browser Sessions
