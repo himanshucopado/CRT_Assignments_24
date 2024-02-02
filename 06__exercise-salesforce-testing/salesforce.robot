@@ -3,6 +3,7 @@ Resource                        ../resources.robot/common.robot
 Library                         QForce
 Library                         QWeb
 Library                         OperatingSystem
+Library                         QVision
 # Library                       SSHLibrary
 Suite Setup                     Setup Browser
 Test Teardown                   Run Keyword                 Logout
