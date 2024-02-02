@@ -167,10 +167,10 @@ Download and save SF report01
     @{downloads}=               List Files In Directory     ${downloads_folder}
     ${downloaded_file}=                Get From List               ${downloads}                0
     Log                         Downloaded Filename: ${downloaded_file}
-    # OpenWindow
-    # SwitchWindow                NEW
-    # Sleep                       2s
-    # GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
+    OpenWindow
+    SwitchWindow                NEW
+    Sleep                       2s
+    GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
     Move File                   ${downloads_folder}/${downloaded_file}                         ${OUTPUT_DIR}
     Sleep                       2s
     @{outputs}=                   List Files In Directory     ${OUTPUT_DIR}
