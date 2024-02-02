@@ -138,7 +138,7 @@ Download and save SF report
     Sleep                       2s
     @{outputs}=                   List Files In Directory     ${OUTPUT_DIR}
     # LogScreenshot
-    ${output_file}=             Get From List                        
+    ${output_file}=             Get From List                 ${outputs}                        1
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
