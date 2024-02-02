@@ -118,7 +118,6 @@ Download and save SF report
     ClickText                   Export
     UseModal                    On
     ExpectFileDownload
-    # ClickText                 Export                      partial_match=False         tag=button
     ClickElement                //button[@title\="Export"]
     ${file_path} =              VerifyFileDownload          timeout=20s
     Log to console              File has been saved to: ${file_path}
