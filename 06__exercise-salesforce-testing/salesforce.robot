@@ -114,10 +114,10 @@ Download and save SF Dasboard report
     Appstate                    Home
     ClickText                   Dashboards
     TypeText                    Search recent dashboards...                             Key Performance Indicators
-    ClickText                   Key Performance Indicators                        anchor=Dashboard Name
+    ClickText                   Key Performance Indicators                              anchor=Dashboard Name
     ClickText                   More Dashboard Actions
     ClickText                   Download
-   
+
     IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
         ${downloads_folder}=    Set Variable                /home/executor/Downloads
     ELSE                        # Live Testing environment
