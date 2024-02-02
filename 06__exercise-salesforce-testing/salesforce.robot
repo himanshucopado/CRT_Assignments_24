@@ -109,6 +109,32 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
         Log To Console          ${error_message}
     END
 
+Download and save SF Dasboard report
+    [Tags]                      Download
+    Appstate                    Home
+    ClickText                   Reports
+    ClickText                   Marketing Exec Leads by Source
+    ClickText                   More Actions
+    ClickText                   Export
+    UseModal                    On
+    ClickElement                //button[@title\="Export"]
+    UseModal                    Off
+    IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
+        ${downloads_folder}=    Set Variable                /home/executor/Downloads
+    ELSE                                                                                # Live Testing environment
+        ${downloads_folder}=    Set Variable                /home/services/Downloads
+    END
+    @{downloads}=               List Files In Directory     ${downloads_folder}
+    ${downloaded_file}=                Get From List               ${downloads}                0
+    Log                         Downloaded Filename: ${downloaded_file}
+    OpenWindow
+    SwitchWindow                NEW
+    Sleep                       2s
+    GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
+    Move File                   ${downloads_folder}/${downloaded_file}                         ${OUTPUT_DIR}
+    Sleep                       2s
+    @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
+    LogScreenshot
 Download and save SF report
     [Tags]                      Download
     Appstate                    Home
