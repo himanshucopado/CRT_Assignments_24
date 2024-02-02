@@ -145,20 +145,20 @@ Download and save SF report
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
 Download and save SF report01
     Appstate                    Home
-    # ClickText                 Data
-    # ClickText                 Files
-    # UseTable                  SortTitle
-    # ClickCell                 r1c4
-    # ExpectFileDownload
-    # ClickText                 Download
-    # ${file_path} =            VerifyFileDownload          timeout=20s
-    # Log to console            File has been saved to: ${file_path}
-    # @{downloads}=             List Files In Directory     ${downloads_folder}
-    # ${pdf_file}=              Get From List               ${downloads}                0
-    # Log                       PDF Filename: ${pdf_file}
-    # OpenWindow
-    # SwitchWindow              NEW
-    # GoTo                      file://${file_path}
+    ClickText                 Data
+    ClickText                 Files
+    UseTable                  SortTitle
+    ClickCell                 r1c4
+    ExpectFileDownload
+    ClickText                 Download
+    ${file_path} =            VerifyFileDownload          timeout=20s
+    Log to console            File has been saved to: ${file_path}
+    @{downloads}=             List Files In Directory     ${downloads_folder}
+    ${pdf_file}=              Get From List               ${downloads}                0
+    Log                       PDF Filename: ${pdf_file}
+    OpenWindow
+    SwitchWindow              NEW
+    GoTo                      file://${file_path}
    
 
     # IF                        "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
