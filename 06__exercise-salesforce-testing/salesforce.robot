@@ -174,7 +174,7 @@ Download and save SF report01
     Move File                   ${downloads_folder}/${downloaded_file}                         ${OUTPUT_DIR}
     Sleep                       2s
     @{outputs}=                   List Files In Directory     ${OUTPUT_DIR}
-    # LogScreenshot
+    LogScreenshot
     ${output_file}=             Get From List                 ${outputs}                        1
     OpenWindow
     SwitchWindow                NEW
