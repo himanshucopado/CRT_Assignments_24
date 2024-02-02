@@ -109,67 +109,67 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
 Download and save SF report
     [Tags]                      Download
     Appstate                    Home
-    ClickText    Reports
-    ClickText    Marketing Exec Leads by Source
-    ClickText    More Actions
-    ClickText    Export
-    UseModal    On
-    ClickText    Export    partial_match=False
-    UseModal    Off
+    ClickText                   Reports
+    ClickText                   Marketing Exec Leads by Source
+    ClickText                   More Actions
+    ClickText                   Export
+    UseModal                    On
+    ClickText                   Export                      partial_match=False
+    UseModal                    Off
     CloseWindow
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-    # ClickText                   Data
-    # ClickText                   Files
-    # UseTable                    SortTitle
-    # ClickCell                   r1c4
+
+
+
+
+
+
+
+
+
+
+
+
+    # ClickText                 Data
+    # ClickText                 Files
+    # UseTable                  SortTitle
+    # ClickCell                 r1c4
     # ExpectFileDownload
-    # ClickText                   Download
-    # ${file_path} =              VerifyFileDownload          timeout=20s
-    # Log to console              File has been saved to: ${file_path}
-    # @{downloads}=               List Files In Directory     ${downloads_folder}
-    # ${pdf_file}=                Get From List               ${downloads}                0
-    # Log                         PDF Filename: ${pdf_file}
+    # ClickText                 Download
+    # ${file_path} =            VerifyFileDownload          timeout=20s
+    # Log to console            File has been saved to: ${file_path}
+    # @{downloads}=             List Files In Directory     ${downloads_folder}
+    # ${pdf_file}=              Get From List               ${downloads}                0
+    # Log                       PDF Filename: ${pdf_file}
     # OpenWindow
-    # SwitchWindow                NEW
-    # GoTo                        file://${file_path}
+    # SwitchWindow              NEW
+    # GoTo                      file://${file_path}
     # MoveFiles                 ${file_path}                C:/Users/HimanshuSharma/Desktop/CRT_Training
     # Save File                 //div[@title\="Download"]                               SalesforceReport.png                 C:\Users\HimanshuSharma\Desktop\CRT_Training    parent=a
     # Log                       File has been saved to: ${file_path}
 
 
-# IF                         "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
-#     ${downloads_folder}=        Set Variable                /home/executor/Downloads
-#     ELSE                        # Live Testing environment
-#         ${downloads_folder}=    Set Variable                /home/services/Downloads
-#     END
+    # IF                        "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
+    #                           ${downloads_folder}=        Set Variable                /home/executor/Downloads
+    #                           ELSE                        # Live Testing environment
+    #                           ${downloads_folder}=        Set Variable                /home/services/Downloads
+    #                           END
 
-#     #Get file name from download folder
-#     @{downloads}=               List Files In Directory     ${downloads_folder}
-#     ${pdf_file}=                Get From List               ${downloads}                0
-#     Log                         PDF Filename: ${pdf_file}
-#     #Verify on screen
-#     # OpenWindow
-#     # SwitchWindow              NEW
-#     # GoTo                      file://${EXECDIR}/../../Downloads/${pdf_file}
-#     # VerifyText                Eutelsat SA                 recognition_mode=Vision     timeout=2
-#     # Presskey                  ${EMPTY}                    {DOWN}                      #To go on the next page of the PDF
-#     # VerifyText                MHZ                         recognition_mode=Vision     timeout=2
-#     # CloseWindow
-#     # SwitchWindow              2
-# and then you could also do something like this to move it to output so it will be attached in the zip
-#     #Moving file to Outpur dir so it will be attached to the run
-#     Move File                   ${downloads_folder}/${pdf_file}                         ${OUTPUT_DIR}
-#     Sleep                       2s
-#     List Files In Directory     ${OUTPUT_DIR}
-#     LogScreenshot
+    #                           #Get file name from download folder
+    #                           @{downloads}=               List Files In Directory     ${downloads_folder}
+    #                           ${pdf_file}=                Get From List               ${downloads}           0
+    #                           Log                         PDF Filename: ${pdf_file}
+    #                           #Verify on screen
+    #                           # OpenWindow
+    #                           # SwitchWindow              NEW
+    #                           # GoTo                      file://${EXECDIR}/../../Downloads/${pdf_file}
+    #                           # VerifyText                Eutelsat SA                 recognition_mode=Vision              timeout=2
+    #                           # Presskey                  ${EMPTY}                    {DOWN}                 #To go on the next page of the PDF
+    #                           # VerifyText                MHZ                         recognition_mode=Vision              timeout=2
+    #                           # CloseWindow
+    #                           # SwitchWindow              2
+    # and then you could also do something like this to move it to output so it will be attached in the zip
+    #                           #Moving file to Outpur dir so it will be attached to the run
+    #                           Move File                   ${downloads_folder}/${pdf_file}                    ${OUTPUT_DIR}
+    #                           Sleep                       2s
+    #                           List Files In Directory     ${OUTPUT_DIR}
+    #                           LogScreenshot
