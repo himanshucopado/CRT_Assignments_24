@@ -129,6 +129,7 @@ Download and save SF Dasboard report
     SwitchWindow                NEW
     Sleep                       2s
     GoTo                        file://${EXECDIR}/../../Downloads/${downloaded_file}
+    LogScreenshot
     VerifyText                  Key Performance Indicators                       recognition_mode=Vision                     timeout=2
     Move File                   ${downloads_folder}/${downloaded_file}                  ${OUTPUT_DIR}
     Sleep                       2s
