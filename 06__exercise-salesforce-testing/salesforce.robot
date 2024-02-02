@@ -138,11 +138,6 @@ Download and save SF report
     Sleep                       2s
     List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
-    # OpenWindow
-    # SwitchWindow                NEW
-    # Sleep                       2s
-    # GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
-    # VerifyText                  Marketing Exec Leads by Source                          recognition_mode=Vision              timeout=2
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
 
