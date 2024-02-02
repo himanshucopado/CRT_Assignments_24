@@ -141,8 +141,7 @@ Download and save SF report
     VerifyText                  Marketing Exec Leads by Source                          recognition_mode=Vision    timeout=2       
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
-    # file://home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-14-13-01.xlsx
-    file:///home/services/Downloads/Marketing%20Exec%20Leads%20by%20Source-2024-02-02-14-20-34.xlsx
+    
 Download and save SF report01
     Appstate                  Home
     ClickText                 Data
