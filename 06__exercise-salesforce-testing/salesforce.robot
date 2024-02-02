@@ -141,7 +141,7 @@ Download and save SF report
     OpenWindow
     SwitchWindow              NEW
     GoTo                      file://${EXECDIR}/../../Downloads/${pdf_file}
-    VerifyText                Eutelsat SA                 recognition_mode=Vision              timeout=2
+    VerifyText                Marketing Exec Leads by Source                 recognition_mode=Vision              timeout=2
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
 
