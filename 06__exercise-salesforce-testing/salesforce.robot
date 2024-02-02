@@ -121,6 +121,9 @@ Download and save SF report
     ClickElement                //button[@title\="Export"]
     ${file_path} =              VerifyFileDownload          timeout=20s
     Log to console              File has been saved to: ${file_path}
+    OpenWindow
+    SwitchWindow              NEW
+    GoTo                      file://${file_path}
     UseModal                    Off
     IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
         ${downloads_folder}=    Set Variable                /home/executor/Downloads
