@@ -117,6 +117,9 @@ Download and save SF report
     ClickText                   Download
     ${file_path} =              VerifyFileDownload          timeout=20s
     Log to console              File has been saved to: ${file_path}
+    @{downloads}=               List Files In Directory     ${downloads_folder}
+    ${pdf_file}=                Get From List               ${downloads}                0
+    Log                         PDF Filename: ${pdf_file}
     OpenWindow
     SwitchWindow                NEW
     GoTo                        file://${file_path}
@@ -124,28 +127,29 @@ Download and save SF report
     # Save File                 //div[@title\="Download"]                               SalesforceReport.png                 C:\Users\HimanshuSharma\Desktop\CRT_Training    parent=a
     # Log                       File has been saved to: ${file_path}
 
-IF                         "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
-    ${downloads_folder}=        Set Variable                /home/executor/Downloads
-    ELSE                        # Live Testing environment
-        ${downloads_folder}=    Set Variable                /home/services/Downloads
-    END
 
-    #Get file name from download folder
-    @{downloads}=               List Files In Directory     ${downloads_folder}
-    ${pdf_file}=                Get From List               ${downloads}                0
-    Log                         PDF Filename: ${pdf_file}
-    #Verify on screen
-    # OpenWindow
-    # SwitchWindow              NEW
-    # GoTo                      file://${EXECDIR}/../../Downloads/${pdf_file}
-    # VerifyText                Eutelsat SA                 recognition_mode=Vision     timeout=2
-    # Presskey                  ${EMPTY}                    {DOWN}                      #To go on the next page of the PDF
-    # VerifyText                MHZ                         recognition_mode=Vision     timeout=2
-    # CloseWindow
-    # SwitchWindow              2
-and then you could also do something like this to move it to output so it will be attached in the zip
-    #Moving file to Outpur dir so it will be attached to the run
-    Move File                   ${downloads_folder}/${pdf_file}                         ${OUTPUT_DIR}
-    Sleep                       2s
-    List Files In Directory     ${OUTPUT_DIR}
-    LogScreenshot
+# IF                         "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
+#     ${downloads_folder}=        Set Variable                /home/executor/Downloads
+#     ELSE                        # Live Testing environment
+#         ${downloads_folder}=    Set Variable                /home/services/Downloads
+#     END
+
+#     #Get file name from download folder
+#     @{downloads}=               List Files In Directory     ${downloads_folder}
+#     ${pdf_file}=                Get From List               ${downloads}                0
+#     Log                         PDF Filename: ${pdf_file}
+#     #Verify on screen
+#     # OpenWindow
+#     # SwitchWindow              NEW
+#     # GoTo                      file://${EXECDIR}/../../Downloads/${pdf_file}
+#     # VerifyText                Eutelsat SA                 recognition_mode=Vision     timeout=2
+#     # Presskey                  ${EMPTY}                    {DOWN}                      #To go on the next page of the PDF
+#     # VerifyText                MHZ                         recognition_mode=Vision     timeout=2
+#     # CloseWindow
+#     # SwitchWindow              2
+# and then you could also do something like this to move it to output so it will be attached in the zip
+#     #Moving file to Outpur dir so it will be attached to the run
+#     Move File                   ${downloads_folder}/${pdf_file}                         ${OUTPUT_DIR}
+#     Sleep                       2s
+#     List Files In Directory     ${OUTPUT_DIR}
+#     LogScreenshot
