@@ -3,7 +3,7 @@ Resource                        ../resources.robot/common.robot
 Library                         QForce
 Library                         QWeb
 Library                         OperatingSystem
-# Library                         SSHLibrary
+# Library                       SSHLibrary
 Suite Setup                     Setup Browser
 Test Teardown                   Run Keyword                 Logout
 Suite Teardown                  Close All Browser Sessions
@@ -127,9 +127,9 @@ Download and save SF report
     # GoTo                      file://home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
     ${downloads_folder}=        Set Variable                /home/services/Downloads
     @{downloads}=               List Files In Directory     ${downloads_folder}
-    ${pdf_file}=              Get From List               ${downloads}                0
-    Log                       PDF Filename: ${pdf_file}
-    Move File                   ${downloads_folder}/${pdf_file}                    ${OUTPUT_DIR}
+    ${pdf_file}=                Get From List               ${downloads}                0
+    Log                         PDF Filename: ${pdf_file}
+    Move File                   ${downloads_folder}/${pdf_file}                         ${OUTPUT_DIR}
     Sleep                       2s
     List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
