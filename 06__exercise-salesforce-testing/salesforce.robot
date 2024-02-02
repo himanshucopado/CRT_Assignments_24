@@ -109,8 +109,6 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
 Download and save SF report
     [Tags]                      Download
     Appstate                    Home
-    
-
     ClickText    Reports
     ClickText    Marketing Exec Leads by Source
     ClickText    More Actions
