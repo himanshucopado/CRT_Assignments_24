@@ -119,9 +119,9 @@ Download and save SF report
     ${file_path} =              VerifyFileDownload          timeout=20s
     Log to console              File has been saved to: ${file_path}
     UseModal                    Off
-    OpenWindow
-    SwitchWindow              NEW
-    GoTo                      file://home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
+    # OpenWindow
+    # SwitchWindow              NEW
+    # GoTo                      file://home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
     ${downloads_folder}=        Set Variable                /home/services/Downloads
     @{downloads}=             List Files In Directory     ${downloads_folder}
     # ${pdf_file}=              Get From List               ${downloads}                0
