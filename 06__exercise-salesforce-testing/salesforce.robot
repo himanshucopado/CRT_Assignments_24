@@ -130,13 +130,6 @@ Download and save SF report
     @{downloads}=               List Files In Directory     ${downloads_folder}
     ${pdf_file}=                Get From List               ${downloads}                0
     Log                         PDF Filename: ${pdf_file}
-    # OpenWindow
-    # SwitchWindow                NEW
-    # Sleep                       2s
-    # # GoTo                        file://${EXECDIR}/../../Downloads/${pdf_file}
-    # GoTo                        file://${downloads_folder}/${pdf_file}
-    # # GoTo                        file://${file_path}
-    # VerifyText                  Marketing Exec Leads by Source                          recognition_mode=Vision              timeout=2
     Move File                   ${downloads_folder}/${pdf_file}                         ${OUTPUT_DIR}
     Sleep                       2s
     List Files In Directory     ${OUTPUT_DIR}
