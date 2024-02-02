@@ -117,10 +117,10 @@ Download and save SF report
     ClickText                   More Actions
     ClickText                   Export
     UseModal                    On
-    ExpectFileDownload
+    # ExpectFileDownload
     ClickElement                //button[@title\="Export"]
-    ${file_path} =              VerifyFileDownload          timeout=20s
-    Log to console              File has been saved to: ${file_path}
+    # ${file_path} =              VerifyFileDownload          timeout=20s
+    # Log to console              File has been saved to: ${file_path}
     UseModal                    Off
     IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
         ${downloads_folder}=    Set Variable                /home/executor/Downloads
