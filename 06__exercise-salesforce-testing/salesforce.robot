@@ -117,7 +117,6 @@ Download and save SF Dasboard report
     ClickText                   Key Performance Indicators                              anchor=Dashboard Name
     ClickText                   More Dashboard Actions
     ClickText                   Download
-
     IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
         ${downloads_folder}=    Set Variable                /home/executor/Downloads
     ELSE                        # Live Testing environment
@@ -130,6 +129,7 @@ Download and save SF Dasboard report
     SwitchWindow                NEW
     Sleep                       2s
     GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
+    VerifyText                  Key Performance Indicators                              recognition_mode=Vision              timeout=2
     Move File                   ${downloads_folder}/${downloaded_file}                  ${OUTPUT_DIR}
     Sleep                       2s
     @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
