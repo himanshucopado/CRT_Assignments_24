@@ -132,6 +132,7 @@ Download and save SF report
     Log                         PDF Filename: ${pdf_file}
     OpenWindow
     SwitchWindow                NEW
+    Sleep                       2s
     # GoTo                        file://${EXECDIR}/../../Downloads/${pdf_file}
     GoTo                        file://${downloads_folder}/${pdf_file}
     # GoTo                        file://${file_path}
