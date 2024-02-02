@@ -134,6 +134,8 @@ Download and save SF Dasboard report
     Sleep                       2s
     @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
+
+    # file:///home/services/Downloads/Key%20Performance%20Indicators.png
 Download and save SF report
     [Tags]                      Download
     Appstate                    Home
