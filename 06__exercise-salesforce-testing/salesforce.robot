@@ -131,7 +131,7 @@ Download and save SF Dasboard report
     Sleep                       2s
     GoTo                        file://${EXECDIR}/../../Downloads/${downloaded_file}
     LogScreenshot
-    VerifyText                  Key Performance Indicators
+    VerifyText                  Key Performance Indicators                        timeout=2
     Move File                   ${downloads_folder}/${downloaded_file}                  ${OUTPUT_DIR}
     Sleep                       2s
     @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
