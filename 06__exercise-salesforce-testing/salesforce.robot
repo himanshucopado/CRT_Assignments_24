@@ -137,10 +137,8 @@ Download and save SF report
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
-    # GoTo                        file:/${downloads_folder}/${pdf_file}
     GoTo                        file:/${EXECDIR}/../../Downloads/${pdf_file}
-    # GoTo                        file://${file_path}
-    VerifyText                  Marketing Exec Leads by Source                          recognition_mode=Vision       
+    VerifyText                  Marketing Exec Leads by Source                          recognition_mode=Vision    timeout=2       
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
     # file://home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-14-13-01.xlsx
