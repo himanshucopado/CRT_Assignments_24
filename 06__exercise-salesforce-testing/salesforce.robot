@@ -137,9 +137,9 @@ Download and save SF report
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
-    # GoTo                        file://${downloads_folder}/${pdf_file}
+    GoTo                        file:/${downloads_folder}/${pdf_file}
     GoTo                        file:/${EXECDIR}/../../Downloads/${pdf_file}
-    # GoTo                        file://${downloads_folder}/${pdf_file}
+ 
     # GoTo                        file://${file_path}
     VerifyText                  Marketing Exec Leads by Source                          recognition_mode=Vision       
 
