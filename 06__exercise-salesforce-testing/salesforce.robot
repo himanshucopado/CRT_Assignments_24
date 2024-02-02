@@ -117,7 +117,7 @@ Download and save SF report
     ClickText                   Export                      partial_match=False
     UseModal                    Off
     CloseWindow
-     ${file_path} =            VerifyFileDownload          timeout=20s
+    ${file_path} =            VerifyFileDownload          timeout=20s
     Log to console            File has been saved to: ${file_path}
     @{downloads}=             List Files In Directory     ${downloads_folder}
     ${pdf_file}=              Get From List               ${downloads}                0
