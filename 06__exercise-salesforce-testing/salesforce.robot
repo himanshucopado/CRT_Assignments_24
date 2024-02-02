@@ -129,7 +129,7 @@ Download and save SF report
     END
     @{downloads}=               List Files In Directory     ${downloads_folder}
     ${downloaded_file}=                Get From List               ${downloads}                0
-    Log                         PDF Filename: ${downloaded_file}
+    Log                         Downloaded Filename: ${downloaded_file}
     Move File                   ${downloads_folder}/${downloaded_file}                         ${OUTPUT_DIR}
     Sleep                       2s
     List Files In Directory     ${OUTPUT_DIR}
