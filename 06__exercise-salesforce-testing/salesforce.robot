@@ -118,15 +118,15 @@ Download and save SF report
     ClickText                   Export
     UseModal                    On
     ExpectFileDownload
-    # ClickText                   Export                      partial_match=False    tag=button
+    # ClickText                 Export                      partial_match=False         tag=button
     ClickElement                //button[@title\="Export"]
     ${file_path} =              VerifyFileDownload          timeout=20s
     Log to console              File has been saved to: ${file_path}
     UseModal                    Off
-    IF                        "${EXECDIR}" == "/home/executor/execution"                          # normal test run environment
-        ${downloads_folder}=        Set Variable                /home/executor/Downloads
-    ELSE                                                                                          # Live Testing environment
-        ${downloads_folder}=        Set Variable                /home/services/Downloads
+    IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
+        ${downloads_folder}=    Set Variable                /home/executor/Downloads
+    ELSE                                                                                # Live Testing environment
+        ${downloads_folder}=    Set Variable                /home/services/Downloads
     END
     @{downloads}=               List Files In Directory     ${downloads_folder}
     ${pdf_file}=                Get From List               ${downloads}                0
@@ -136,9 +136,9 @@ Download and save SF report
     List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
     OpenWindow
-    SwitchWindow              NEW
-    GoTo                      file://${EXECDIR}/../../Downloads/${pdf_file}
-    VerifyText                Marketing Exec Leads by Source                 recognition_mode=Vision              timeout=2
+    SwitchWindow                NEW
+    GoTo                        file://${EXECDIR}/../../Downloads/${pdf_file}
+    VerifyText                  Marketing Exec Leads by Source                          recognition_mode=Vision              timeout=2
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
 
