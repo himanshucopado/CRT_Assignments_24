@@ -133,7 +133,7 @@ Download and save SF report
     GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
     Move File                   ${downloads_folder}/${downloaded_file}                         ${OUTPUT_DIR}
     Sleep                       2s
-    @{outputs}=                   List Files In Directory     ${OUTPUT_DIR}
+    @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
