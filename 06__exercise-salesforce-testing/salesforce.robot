@@ -119,7 +119,7 @@ Download and save SF report
      ${file_path} =            VerifyFileDownload          timeout=20s
     Log to console            File has been saved to: ${file_path}
     UseModal                    Off
-    CloseWindow
+    # CloseWindow
     # ${file_path} =            VerifyFileDownload          timeout=20s
     # Log to console            File has been saved to: ${file_path}
     # @{downloads}=             List Files In Directory     ${downloads_folder}
