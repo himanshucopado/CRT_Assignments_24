@@ -130,7 +130,6 @@ Download and save SF report
     ELSE                        # Live Testing environment
         ${downloads_folder}=        Set Variable                /home/services/Downloads
     END
-    ${downloads_folder}=        Set Variable                /home/services/Downloads
     @{downloads}=               List Files In Directory     ${downloads_folder}
     ${pdf_file}=                Get From List               ${downloads}                0
     Log                         PDF Filename: ${pdf_file}
