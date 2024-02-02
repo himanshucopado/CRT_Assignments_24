@@ -125,9 +125,9 @@ Download and save SF report
     # OpenWindow
     # SwitchWindow              NEW
     # GoTo                      file://home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
-    IF                        "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
+    IF                        "${EXECDIR}" == "/home/executor/execution"                          # normal test run environment
         ${downloads_folder}=        Set Variable                /home/executor/Downloads
-    ELSE                        # Live Testing environment
+    ELSE                                                                                          # Live Testing environment
         ${downloads_folder}=        Set Variable                /home/services/Downloads
     END
     @{downloads}=               List Files In Directory     ${downloads_folder}
