@@ -138,6 +138,10 @@ Download and save SF report
     Sleep                       2s
     List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
+    OpenWindow
+    SwitchWindow              NEW
+    GoTo                      file://${EXECDIR}/../../Downloads/${pdf_file}
+    VerifyText                Eutelsat SA                 recognition_mode=Vision              timeout=2
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
 
