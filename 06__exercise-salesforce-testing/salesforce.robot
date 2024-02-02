@@ -112,6 +112,11 @@ Exercise 13 - TRY / EXCEPT: Capture the error message
 Download and save SF Dasboard report
     [Tags]                      Download
     Appstate                    Home
+    ClickText                   Dashboards
+    TypeText                    Search recent dashboards...                             Key Performance Indicator
+    ClickText                   s
+    ClickText                   More Dashboard Actions
+    ClickText                   Download
     ClickText                   Reports
     ClickText                   Marketing Exec Leads by Source
     ClickText                   More Actions
@@ -121,17 +126,17 @@ Download and save SF Dasboard report
     UseModal                    Off
     IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
         ${downloads_folder}=    Set Variable                /home/executor/Downloads
-    ELSE                                                                                # Live Testing environment
+    ELSE                        # Live Testing environment
         ${downloads_folder}=    Set Variable                /home/services/Downloads
     END
     @{downloads}=               List Files In Directory     ${downloads_folder}
-    ${downloaded_file}=                Get From List               ${downloads}                0
+    ${downloaded_file}=         Get From List               ${downloads}                0
     Log                         Downloaded Filename: ${downloaded_file}
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
     GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
-    Move File                   ${downloads_folder}/${downloaded_file}                         ${OUTPUT_DIR}
+    Move File                   ${downloads_folder}/${downloaded_file}                  ${OUTPUT_DIR}
     Sleep                       2s
     @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
@@ -147,17 +152,17 @@ Download and save SF report
     UseModal                    Off
     IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
         ${downloads_folder}=    Set Variable                /home/executor/Downloads
-    ELSE                                                                                # Live Testing environment
+    ELSE                        # Live Testing environment
         ${downloads_folder}=    Set Variable                /home/services/Downloads
     END
     @{downloads}=               List Files In Directory     ${downloads_folder}
-    ${downloaded_file}=                Get From List               ${downloads}                0
+    ${downloaded_file}=         Get From List               ${downloads}                0
     Log                         Downloaded Filename: ${downloaded_file}
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
     GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
-    Move File                   ${downloads_folder}/${downloaded_file}                         ${OUTPUT_DIR}
+    Move File                   ${downloads_folder}/${downloaded_file}                  ${OUTPUT_DIR}
     Sleep                       2s
     @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
@@ -179,21 +184,21 @@ Download and save SF report01
     UseModal                    Off
     IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
         ${downloads_folder}=    Set Variable                /home/executor/Downloads
-    ELSE                                                                                # Live Testing environment
+    ELSE                        # Live Testing environment
         ${downloads_folder}=    Set Variable                /home/services/Downloads
     END
     @{downloads}=               List Files In Directory     ${downloads_folder}
-    ${downloaded_file}=                Get From List               ${downloads}                0
+    ${downloaded_file}=         Get From List               ${downloads}                0
     Log                         Downloaded Filename: ${downloaded_file}
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
     GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
-    Move File                   ${downloads_folder}/${downloaded_file}                         ${OUTPUT_DIR}
+    Move File                   ${downloads_folder}/${downloaded_file}                  ${OUTPUT_DIR}
     Sleep                       2s
-    @{outputs}=                   List Files In Directory     ${OUTPUT_DIR}
+    @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
-    ${output_file}=             Get From List                 ${outputs}                        1
+    ${output_file}=             Get From List               ${outputs}                  1
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
