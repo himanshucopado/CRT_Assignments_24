@@ -142,7 +142,7 @@ Download and save SF report
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
-    GoTo                        file:/${EXECDIR}/../../Downloads/${downloaded_file}
+    GoTo                        file:/${OUTPUT_DIR}/${output_file}
 
     # /home/services/Downloads/Marketing Exec Leads by Source-2024-02-02-10-38-31.xlsx
 
