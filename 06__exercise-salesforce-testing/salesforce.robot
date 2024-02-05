@@ -130,7 +130,7 @@ Download and save SF Dasboard report02
     Move File                   ${file_path}                  ${OUTPUT_DIR}
     Sleep                       2s
     @{downloads}=               List Files In Directory     ${OUTPUT_DIR}
-    ${downloaded_file}=         Get From List               ${OUTPUT_DIR}    1
+    ${downloaded_file}=         Get From List               ${downloads}    1
     Log to console              Downloaded Filename: ${downloaded_file}
     LogScreenshot
 Download and save SF Dasboard report
