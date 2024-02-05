@@ -121,18 +121,10 @@ Download and save SF Dasboard report02
     ClickText                   Download
     ${file_path} =              VerifyFileDownload          timeout=20s
     Log to console              File has been saved to: ${file_path}
-    IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
-        ${downloads_folder}=    Set Variable                /home/executor/Downloads
-    ELSE                        # Live Testing environment
-        ${downloads_folder}=    Set Variable                /home/services/Downloads
-    END
-    @{downloads}=               List Files In Directory     ${downloads_folder}
-    ${downloaded_file}=         Get From List               ${downloads}                0
-    Log                         Downloaded Filename: ${downloaded_file}
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
-    GoTo                        file://${EXECDIR}/../../Downloads/${downloaded_file}
+    GoTo                        ${file_path}
     LogScreenshot
     # VerifyText                  Key Performance Indicators                        timeout=2
     Move File                   ${downloads_folder}/${downloaded_file}                  ${OUTPUT_DIR}
