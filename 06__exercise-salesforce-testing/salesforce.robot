@@ -131,7 +131,7 @@ Download and save SF Dasboard report02
     Sleep                       2s
     @{downloads}=               List Files In Directory     ${OUTPUT_DIR}
     ${downloaded_file}=         Get From List               ${OUTPUT_DIR}    1
-    Log                         Downloaded Filename: ${downloaded_file}
+    Log to console                        Downloaded Filename: ${downloaded_file}
     LogScreenshot
 Download and save SF Dasboard report
     [Tags]                      Download
