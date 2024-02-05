@@ -127,7 +127,7 @@ Download and save SF Dasboard report02
     GoTo                        ${file_path}
     LogScreenshot
     # VerifyText                  Key Performance Indicators                        timeout=2
-    Move File                   ${downloads_folder}/${downloaded_file}                  ${OUTPUT_DIR}
+    Move File                   ${file_path}                  ${OUTPUT_DIR}
     Sleep                       2s
     @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
