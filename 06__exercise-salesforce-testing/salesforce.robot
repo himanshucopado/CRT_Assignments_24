@@ -129,7 +129,7 @@ Download and save SF Dasboard report02
     # VerifyText                  Key Performance Indicators                        timeout=2
     Move File                   ${file_path}                  ${OUTPUT_DIR}
     Sleep                       2s
-    @{outputs}=                 List Files In Directory     ${OUTPUT_DIR}
+    List Files In Directory     ${OUTPUT_DIR}
     LogScreenshot
 Download and save SF Dasboard report
     [Tags]                      Download
