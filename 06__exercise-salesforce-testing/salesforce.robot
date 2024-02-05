@@ -124,7 +124,7 @@ Download and save SF Dasboard report02
     OpenWindow
     SwitchWindow                NEW
     Sleep                       2s
-    GoTo                        ${file_path}
+    GoTo                        file://${file_path}
     LogScreenshot
     # VerifyText                  Key Performance Indicators                        timeout=2
     Move File                   ${file_path}                  ${OUTPUT_DIR}
