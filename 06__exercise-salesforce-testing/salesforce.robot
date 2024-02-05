@@ -117,11 +117,10 @@ Download and save SF Dasboard report
     TypeText                    Search recent dashboards...                             Key Performance Indicators
     ClickText                   Key Performance Indicators                              anchor=Dashboard Name
     ClickText                   More Dashboard Actions
-    # ExpectFileDownload
-    # ClickText                   Download
-    # ${file_path} =              VerifyFileDownload          timeout=20s
-    # Log to console              File has been saved to: ${file_path}
+    ExpectFileDownload
     ClickText                   Download
+    ${file_path} =              VerifyFileDownload          timeout=20s
+    Log to console              File has been saved to: ${file_path}
     IF                          "${EXECDIR}" == "/home/executor/execution"              # normal test run environment
         ${downloads_folder}=    Set Variable                /home/executor/Downloads
     ELSE                        # Live Testing environment
