@@ -228,7 +228,7 @@ Download and save SF report01
     Sleep                       2s
     GoTo                        file:/${OUTPUT_DIR}/${output_file}
 
-Download and save SF report02
+Download and save SF report02_Latest
     Appstate                    Home
     ClickText                   Data
     ClickText                   Files
