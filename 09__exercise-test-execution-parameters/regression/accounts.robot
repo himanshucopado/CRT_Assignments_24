@@ -8,7 +8,7 @@ Suite Teardown              Close All Browsers
 *** Test Cases ***
 
 Exercise 9 - regression - accounts Test Case 1
-    [Tags]     Regression    Accounts
+    [Tags]     Regression    Accounts    Regression
     Log        Regression - Accounts Test Case 1   
 
 Exercise 9 - regression - accounts Test Case 2
