@@ -8,7 +8,7 @@ Suite Teardown              Close All Browsers
 *** Test Cases ***
 
 Exercise 9 - regression - nested - opportunities Test Case 1
-    [Tags]     Regression    Opportunities
+    [Tags]     Regression    Opportunities    Regression
     Log        Regression - Opportunities Test Case 1   
 
 Exercise 9 - regression - nested - opportunities Test Case 2
